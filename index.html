@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#090b0a">
+<title>FRIS | Firmware Risk Intelligence System</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <a class="brand" href="#overview"><span class="brand-mark">F</span><span>FRIS<small>FIRMWARE INTELLIGENCE</small></span></a>
+    <div class="workspace"><span class="workspace-dot"></span> Security workspace <span class="chevron">⌄</span></div>
+    <div class="nav-label">WORKSPACE</div>
+    <nav class="nav">
+      <a class="nav-link active" href="#overview"><span>▦</span> Overview</a>
+      <a class="nav-link" href="#firmware"><span>▣</span> Firmware analysis <b class="nav-count">3</b></a>
+      <a class="nav-link" href="#vulnerabilities"><span>⌕</span> Vulnerabilities</a>
+      <a class="nav-link" href="#agents"><span>✳</span> AI agents <i class="live-dot"></i></a>
+      <a class="nav-link" href="#audit"><span>⬡</span> Blockchain audit</a>
+      <a class="nav-link" href="#reports"><span>▤</span> Reports</a>
+    </nav>
+    <div class="nav-label tools-label">SYSTEM</div>
+    <nav class="nav">
+      <a class="nav-link" href="#activity"><span>◷</span> Activity log</a>
+      <a class="nav-link" href="#settings"><span>⚙</span> Settings</a>
+    </nav>
+    <div class="sidebar-bottom">
+      <div class="security-card"><div class="shield">⬡</div><strong>Security posture</strong><p>Demo environment is ready for exploration.</p><div class="posture-line"><span></span></div><small>DEMO STATUS <b>ACTIVE</b></small></div>
+      <div class="profile"><div class="avatar">RK</div><div><strong>FRIS Analyst</strong><small>Project workspace</small></div><span class="more">•••</span></div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <div class="crumb">Workspace <span>/</span> <b id="pageName">Overview</b></div>
+      <div class="top-actions"><div class="search"><span>⌕</span><input id="searchInput" placeholder="Search assets, CVEs..." aria-label="Search assets and vulnerabilities"><kbd>⌘ K</kbd></div><button class="icon-btn" id="notifyBtn" aria-label="Notifications">♧<i></i></button><div class="top-avatar">RK</div></div>
+    </header>
+    <section class="content" id="overview">
+      <div class="welcome-row"><div><div class="eyebrow"><span class="pulse"></span> FIRMWARE SECURITY OPERATIONS</div><h1>Good evening, Analyst <span>↗</span></h1><p class="subtitle">Here’s your firmware security overview for today.</p></div><div class="welcome-actions"><button class="btn btn-quiet" id="exportBtn">⇩ Export overview</button><a class="btn btn-primary" href="#firmware">＋ New assessment</a></div></div>
+      <div class="demo-banner"><span class="banner-icon">ⓘ</span><div><b>Interactive prototype</b><span>Metrics and events shown here are sample data. Live firmware scanning, external AI services and blockchain transactions are not connected.</span></div><button id="dismissBanner" aria-label="Dismiss notice">×</button></div>
+
+      <div class="section-top"><div><h2>Security overview</h2><p>Key indicators across your firmware workspace</p></div><div class="range-select">◷ <select id="periodSelect" aria-label="Dashboard period"><option>Last 24 hours</option><option>Last 7 days</option><option>Last 30 days</option></select></div></div>
+      <div class="metrics">
+        <article class="metric-card highlight"><div class="metric-head"><span>Total findings</span><span class="metric-icon">⌕</span></div><div class="metric-number">1,284 <span class="trend">↗ 12.4%</span></div><div class="metric-foot"><span class="spark spark-green">▁▂▃▂▄▃▆▅▇</span><span>vs previous period</span></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Firmware assets</span><span class="metric-icon">▣</span></div><div class="metric-number">120 <span class="trend neutral">+8</span></div><div class="metric-foot"><span class="mini-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span>tracked in workspace</span></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Critical findings</span><span class="metric-icon critical-icon">⚠</span></div><div class="metric-number">24 <span class="trend danger">Needs review</span></div><div class="metric-foot"><span class="severity-line"><i></i><i></i><i></i><i></i><i></i></span><span>sample severity data</span></div></article>
+        <article class="metric-card"><div class="metric-head"><span>Audit integrity</span><span class="metric-icon">⬡</span></div><div class="metric-number">98.6<span class="unit">%</span></div><div class="metric-foot"><span class="integrity-icon">✓</span><span>illustrative demo score</span></div></article>
+      </div>
+
+      <div class="main-grid">
+        <section class="panel timeline-panel" id="activity">
+          <div class="panel-heading"><div><h3>Incident timeline</h3><p>Recent activity across the firmware workflow</p></div><button class="dots-btn" aria-label="Timeline options">•••</button></div>
+          <div class="timeline">
+            <div class="timeline-item"><div class="time">09:14 AM</div><div class="timeline-track"><i class="track-dot green-dot"></i><span></span></div><div class="event"><div class="event-top"><b>Firmware uploaded</b><span class="pill pill-green">Completed</span></div><p>router-fw-v2.4.1.bin added to the demo queue.</p><small>ASSET · FW-001</small></div></div>
+            <div class="timeline-item"><div class="time">09:22 AM</div><div class="timeline-track"><i class="track-dot yellow-dot"></i><span></span></div><div class="event"><div class="event-top"><b>Component review queued</b><span class="pill pill-yellow">Pending</span></div><p>Component identification awaits backend integration.</p><small>ANALYSIS · JOB-024</small></div></div>
+            <div class="timeline-item"><div class="time">09:31 AM</div><div class="timeline-track"><i class="track-dot purple-dot"></i><span></span></div><div class="event"><div class="event-top"><b>AI agent workflow prepared</b><span class="pill pill-purple">Demo</span></div><p>Threat intelligence and verification tasks listed.</p><small>AI AGENTS · AG-003</small></div></div>
+            <div class="timeline-item"><div class="time">09:45 AM</div><div class="timeline-track"><i class="track-dot green-dot"></i></div><div class="event"><div class="event-top"><b>Audit hash example generated</b><span class="pill pill-green">Local demo</span></div><p>Sample record fingerprint created in this browser.</p><small>AUDIT · HASH-DEMO</small></div></div>
+          </div>
+          <div class="panel-bottom"><span class="small-muted">Showing 4 sample events</span><a href="#reports">View activity log ↗</a></div>
+        </section>
+        <section class="panel severity-panel" id="vulnerabilities">
+          <div class="panel-heading"><div><h3>Findings by severity</h3><p>Example distribution of risk levels</p></div><button class="dots-btn" aria-label="Severity options">•••</button></div>
+          <div class="severity-content"><div class="donut-wrap"><div class="donut"><div class="donut-center"><strong>1,284</strong><small>Total findings</small></div></div></div><div class="legend"><div><i class="sev sev-critical"></i><span>Critical</span><b>24</b></div><div><i class="sev sev-high"></i><span>High</span><b>186</b></div><div><i class="sev sev-medium"></i><span>Medium</span><b>432</b></div><div><i class="sev sev-low"></i><span>Low</span><b>642</b></div></div></div>
+          <div class="risk-note"><span>↗</span><div><b>Prioritize critical findings</b><p>Confirm severity against verified scan results before taking action.</p></div></div>
+        </section>
+      </div>
+
+      <div class="section-top lower-top"><div><h2>Firmware workspace</h2><p>Upload a sample file and explore the proposed assessment workflow</p></div><span class="tag">LOCAL DEMO</span></div>
+      <div class="main-grid" id="firmware">
+        <section class="panel upload-panel"><div class="panel-heading"><div><h3>Firmware assessment</h3><p>Select a firmware file to preview the workflow</p></div><span class="metric-icon">⇧</span></div><label class="dropzone" for="firmwareFile"><span class="upload-symbol">⇧</span><b>Choose a firmware file</b><span>BIN, IMG, ELF, ZIP or other formats</span><input type="file" id="firmwareFile"><span class="choose-btn">Browse files</span></label><div id="fileDetails" class="file-details">No file selected. Your file stays in this browser; it is not uploaded.</div><button class="btn btn-primary full-btn" id="startAssessment">Preview assessment workflow →</button><p class="fine-print">Prototype only: file contents are not extracted, scanned or sent to a server.</p></section>
+        <section class="panel component-panel"><div class="panel-heading"><div><h3>Component inventory</h3><p>Illustrative component/version records</p></div><a href="#reports">View all ↗</a></div><div class="table-wrap"><table><thead><tr><th>COMPONENT</th><th>VERSION</th><th>STATUS</th></tr></thead><tbody><tr><td><span class="component-icon">◈</span> OpenSSL</td><td>3.0.x</td><td><span class="status-pill status-review">Review</span></td></tr><tr><td><span class="component-icon">◈</span> BusyBox</td><td>1.36.x</td><td><span class="status-pill status-ok">Example</span></td></tr><tr><td><span class="component-icon">◈</span> Linux kernel</td><td>6.x</td><td><span class="status-pill status-review">Review</span></td></tr><tr><td><span class="component-icon">◈</span> libcurl</td><td>8.x</td><td><span class="status-pill status-ok">Example</span></td></tr></tbody></table></div><div class="table-note">Sample entries only — not extracted from your firmware.</div></section>
+      </div>
+
+      <div class="section-top lower-top" id="agents"><div><h2>AI agent orchestration</h2><p>Three proposed specialist agents in the FRIS architecture</p></div><span class="tag purple-tag">PLANNED INTEGRATION</span></div>
+      <div class="agent-grid">
+        <article class="panel agent-card"><div class="agent-head"><div class="agent-icon mint">⌕</div><span class="agent-status planned"><i></i> Planned</span></div><h3>Vulnerability Agent</h3><p>Match identified software components and versions against trusted sources such as the NVD.</p><div class="agent-bottom"><span>Component intelligence</span><b>01</b></div></article>
+        <article class="panel agent-card"><div class="agent-head"><div class="agent-icon violet">✳</div><span class="agent-status planned"><i></i> Planned</span></div><h3>Threat Intelligence Agent</h3><p>Collect and summarize emerging threat context for analyst review; unknown vulnerabilities are not guaranteed to be detected.</p><div class="agent-bottom"><span>Threat context</span><b>02</b></div></article>
+        <article class="panel agent-card"><div class="agent-head"><div class="agent-icon amber">⛨</div><span class="agent-status planned"><i></i> Planned</span></div><h3>Verification Agent</h3><p>Help review remediation evidence, report consistency and audit-ready summaries.</p><div class="agent-bottom"><span>Validation workflow</span><b>03</b></div></article>
+      </div>
+
+      <div class="main-grid lower-top">
+        <section class="panel audit-panel" id="audit"><div class="panel-heading"><div><h3>Blockchain audit verification</h3><p>Local hash demonstration — no chain connection</p></div><div class="chain-icon">⬡</div></div><div class="audit-state"><span class="big-check">✓</span><div><b>Integrity demo ready</b><small>Generate a SHA-256 hash of a demo audit label.</small></div></div><button class="btn btn-quiet full-btn" id="generateHash">Generate demo record hash</button><div id="hashOutput" class="hash-output">No hash generated yet.</div><div class="audit-foot"><span>Data stored on-chain</span><b>Not connected</b></div><p class="fine-print">A production design should store hashes and selected audit metadata only, not full firmware or confidential reports.</p></section>
+        <section class="panel report-panel" id="reports"><div class="panel-heading"><div><h3>Assessment report</h3><p>Generate a sample summary for review</p></div><span class="metric-icon">▤</span></div><div class="report-preview"><div class="report-mark">F</div><div><b>FRIS Security Assessment</b><small>Firmware risk report · Demo template</small></div><span class="report-type">PDF*</span></div><div class="report-stats"><div><small>Assets reviewed</small><b id="reportAssetCount">120</b></div><div><small>Critical findings</small><b class="red-text">24</b></div><div><small>Report status</small><b>Sample</b></div></div><button class="btn btn-primary full-btn" id="downloadReport">Download demo report (.txt)</button><p class="fine-print">*Downloads a text summary, not a PDF or a real scan report.</p></section>
+      </div>
+
+      <section class="panel settings-panel lower-top" id="settings"><div class="panel-heading"><div><h3>Workspace settings</h3><p>Quick preferences for this browser session</p></div></div><div class="settings-row"><div><b>Reduce motion</b><p>Disable decorative animation effects.</p></div><label class="switch"><input type="checkbox" id="motionToggle"><span></span></label></div><div class="settings-row"><div><b>Demo notifications</b><p>Show a small sample notification when requested.</p></div><button class="btn btn-quiet" id="testNotification">Test notification</button></div></section>
+      <footer><div class="footer-brand"><span class="brand-mark">F</span> FRIS</div><span>Firmware Risk Intelligence System</span><span class="footer-status"><i></i> Frontend demo</span><span>© 2026 FRIS Project</span></footer>
+    </section>
+  </main>
+</div>
+<div id="toast" class="toast" role="status" aria-live="polite"></div>
+<script src="script.js"></script>
+</body>
+</html>
